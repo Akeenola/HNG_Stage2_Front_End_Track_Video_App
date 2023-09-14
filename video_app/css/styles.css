@@ -1,8 +1,10 @@
 span{color:blue;font-size: 40px;font-family: 'Courier New', Courier, monospace;}
-ul{border: 10px red;width: 30%;}
-li{text-decoration: none;float: left;padding: 3px;}
-img{height: 180px;width:150px;}
+ul#sidebar{border: 10px 5px;width: 30%;float: left;border-color: black;}
+ul#sidebar li:active{border-left: 20px gold;border-right:20px blueviolet;background-color: blue;}
+ul#sidebar li:hover{background-color: brown;}
+li{text-decoration: none;float: left;padding: 3px;list-style: none;display: block;}
+img{height: 20px;width:20px;}
 h1{color:green;font-size: 60px;font-family: Arial, Helvetica, sans-serif;}
 body{background-color: aqua;}
 video{border: 10px green;}
-input{border-radius: 50%; }
+input{border-radius: 10%; box-shadow: 10px blue;width: 50em;height: 30px;}

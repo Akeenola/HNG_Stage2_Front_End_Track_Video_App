@@ -6,7 +6,7 @@
 <script src="./js/params.js"></script>
 <title>Hello React!</title>
 <!-- Include the React and ReactDOM libraries -->
-<script src="./js/params.js"></script>
+
 <script src="https://fb.me/react-15.2.1.js"></script>
 <script src="https://fb.me/react-dom-15.2.1.js"></script>
 <!-- Include the Babel library -->
@@ -17,7 +17,7 @@
 <script type="text/babel">
 //Neede Objects
 
-sidebar.map(items=>console.log(items.logo+" is having jsx test "+ items.item));
+sidebarItem.map(items=>console.log(items.logo+" is having jsx test "+ items.item));
 
 
 
@@ -38,12 +38,13 @@ var dElement = document.getElementById('example');
 
 function Side(){
     return(
-        <div><ul>
+        <div>
     <h1>My Video is showing</h1>
     <video src="01.mp4" width="500" height ="300" controls>
         </video>
-{sidebar.map((items,i) =>(<div><li id="side_menu_logo"><img key = {i} src = {items.logo} alt= "Movies Logo"/></li>
-<li id="side_menu_text"><span> {items.item}</span></li></div>))};
+        <ul id="sidebar">
+{sidebarItem.map((items,i) =>(<div><li key = {i}><img key = {i} src = {items.logo} alt= "Movies Logo"/><span> {items.item}</span></li>
+    </div>))};
 </ul></div>
 );
 }
