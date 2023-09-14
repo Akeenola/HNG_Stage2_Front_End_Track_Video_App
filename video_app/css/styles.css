@@ -2,11 +2,19 @@ span{color:blue;font-size: 30px;font-family: 'Courier New', Courier, monospace;}
 ul#sidebar{border: 10px 5px;width: 30%;float: left;border-color: black;}
 ul#sidebar li:active{border-left: 20px gold;border-right:20px blueviolet;background-color: blue;}
 ul#sidebar li:hover{background-color: brown;}
-li{text-decoration: none;float: left;padding: 3px;list-style: none;display: block;
-    background-color: chartreuse;margin: 5px;position: relative;clear: left;}
-li:focus{border-left: 20px gold;border-right:20px blueviolet;background-color: blue;}
+ul li{text-decoration: none;float: left;padding: 3px;list-style: none;display: block;
+    background-color:rgb(238, 201, 201);margin: 5px;position: relative;clear: left;}
+li span{font-size: 20px;font-weight: bold;}
+li span:focus{border-left: 20px gold;border-right:20px blueviolet;background-color: blue;}
 img#menu{height: 30px;width:30px;border-radius: 50%;}
 h1{color:green;font-size: 60px;font-family: Arial, Helvetica, sans-serif;}
+h1#search{color:rgb(230, 71, 118);font-size: 30px;font-family: Arial, Helvetica, sans-serif;}
 body{background-color: aqua;}
 video{border: 10px green;}
 input{border-radius: 10% 20%; box-shadow: 10px blue;width: 50em;height: 30px;}
+ul em:video{font-size: 50px;font-weight: bold;}
+span#video{padding: 10px;color: black;font-weight: bold;font-size: 20px;}
+ul#video{background-color:red;border-radius: 10px;float: left; width: 40%;margin-left: -8%;}
+li#video{text-decoration: none;float: left;padding: 0.5px;list-style: none;display: block;
+    margin: 5px;position: relative;clear: left;margin: 0px;position: relative;}
+p#video{font-size: 20px;color: crimson;background-color: white;}

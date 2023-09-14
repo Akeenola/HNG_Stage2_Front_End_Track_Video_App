@@ -15,10 +15,14 @@
 <body>
 <div id="example"></div>
 <script type="text/babel">
-//Neede Objects
+//Needed Objects
 
 sidebarItem.map(items=>console.log(items.logo+" is having jsx test "+ items.item));
-
+//common variables
+ var rate = "Top Rated Movies";
+ var award = "Award";
+ var awardNo = 100
+ var rateNo = 10;
 
 
 
@@ -36,11 +40,41 @@ var rElement = <h1>Hello, world!</h1>;
 var dElement = document.getElementById('example');
 // render the React element in the DOM container
 
+//video display component
+function VideoDisplay(){
+    const value = videoPanl.filter(panel=>(panel.title==="Gorrilla"));
+    console.log(value[0].title);
+    return(
+        <div>
+             <ul id="sidebar">
+                {sidebarItem.map((items,i) =>(<div key = {i}><li ><img id="menu" src = {items.logo} alt= "Movies Logo"/><span> {items.item}</span></li>
+        </div>))};
+            </ul>
+            
+            <ul id="video"><li><video src="videos/03.mp4" width="400" height ="300" controls/></li><li id="video"><span id ="video">{value[0].title}</span><em>.</em><span id ="video">{value[0].year}</span>
+                <em>.</em><span id ="video">{value[0].rating}</span><em id="video">.</em><span id ="video">{value[0].length}</span>
+                </li>
+                <li id="video"><span id ="video">{value[0].family}</span><em id="video">.</em><span id ="video">{value[0].genre}</span>
+                </li>
+                <li> <p id="video">{value[0].short_story}</p>
+                    </li>
+                <li> <p id="video">{value[0].role1.dir1}<em>:</em>{value[0].role1.name1}</p>
+                    <p id="video">{value[0].role2.wri1}<em>:</em>{value[0].role2.name2}</p>
+                    <p id="video">{value[0].role3.start1}<em>:</em>{value[0].role3.name3}</p>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+
+    )
+        
+        
+}
+//side menu component
 function Side(){
     return(
         <div>
-    <h1>My Video is showing</h1>
-    <video src="videos/01.mp4" width="500" height ="300" controls>
+        <video src="videos/01.mp4" width="500" height ="300" controls>
         </video>
         <ul id="sidebar">
 {sidebarItem.map((items,i) =>(<div key = {i}><li ><img id="menu" src = {items.logo} alt= "Movies Logo"/><span> {items.item}</span></li>
@@ -52,8 +86,9 @@ const Comp = (props)=>{
 //function Cat({ name }) {
 return (
     <div>
-<h1>Search for videos</h1>
+<h1 id="search">Search for videos</h1>
 <input type="search" name="seracMe" id="searchMe" placeholder="Type here"/>
+<VideoDisplay/>
 <Side/>
 </div>
 
