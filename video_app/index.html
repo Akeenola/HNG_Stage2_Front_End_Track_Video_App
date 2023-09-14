@@ -40,10 +40,10 @@ function Side(){
     return(
         <div>
     <h1>My Video is showing</h1>
-    <video src="01.mp4" width="500" height ="300" controls>
+    <video src="videos/01.mp4" width="500" height ="300" controls>
         </video>
         <ul id="sidebar">
-{sidebarItem.map((items,i) =>(<div><li key = {i}><img key = {i} src = {items.logo} alt= "Movies Logo"/><span> {items.item}</span></li>
+{sidebarItem.map((items,i) =>(<div key = {i}><li ><img id="menu" src = {items.logo} alt= "Movies Logo"/><span> {items.item}</span></li>
     </div>))};
 </ul></div>
 );
