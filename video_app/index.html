@@ -45,13 +45,13 @@ function VideoDisplay(){
     const value = videoPanl.filter(panel=>(panel.title==="Gorrilla"));
     console.log(value[0].title);
     return(
-        <div>
+        <div id="side">
              <ul id="sidebar">
                 {sidebarItem.map((items,i) =>(<div key = {i}><li ><img id="menu" src = {items.logo} alt= "Movies Logo"/><span> {items.item}</span></li>
         </div>))};
             </ul>
             
-            <ul id="video"><li><video src="videos/03.mp4" width="400" height ="300" controls/></li><li id="video"><span id ="video">{value[0].title}</span><em>.</em><span id ="video">{value[0].year}</span>
+            <ul id="video"><li><video src="videos/03.mp4" width="400" height ="200" controls/></li><li id="video"><span id ="video">{value[0].title}</span><em>.</em><span id ="video">{value[0].year}</span>
                 <em>.</em><span id ="video">{value[0].rating}</span><em id="video">.</em><span id ="video">{value[0].length}</span>
                 </li>
                 <li id="video"><span id ="video">{value[0].family}</span><em id="video">.</em><span id ="video">{value[0].genre}</span>
@@ -64,7 +64,9 @@ function VideoDisplay(){
                 </li>
                 <li></li>
             </ul>
+            <LogIn/>
         </div>
+        
 
     )
         
@@ -73,7 +75,7 @@ function VideoDisplay(){
 //side menu component
 function Side(){
     return(
-        <div>
+        <div id="side">
         <video src="videos/01.mp4" width="500" height ="300" controls>
         </video>
         <ul id="sidebar">
@@ -82,14 +84,26 @@ function Side(){
 </ul></div>
 );
 }
+
+//Component login
+const LogIn = (props) =>{
+    return(
+        <div id="logIn">
+            <h1 id="search">Search for videos</h1>
+<input type="search" name="seracMe" id="searchMe" placeholder="Search"/>
+<input type="button" value="Log In" id="logIn"/>
+{photoAdvert.map((val,itr) => (<div key = {itr}><ul id="advert"><li><img id ="advert" src={val.logo}/><p>{val.item}</p></li></ul></div>))}
+            </div>
+    )
+}
+
 const Comp = (props)=>{
 //function Cat({ name }) {
 return (
     <div>
-<h1 id="search">Search for videos</h1>
-<input type="search" name="seracMe" id="searchMe" placeholder="Type here"/>
 <VideoDisplay/>
-<Side/>
+
+
 </div>
 
 );

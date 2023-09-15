@@ -20,6 +20,8 @@
 		"tests-only": "node test",
 		"test": "npm run tests-only",
 		"posttest": "npx aud",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
@@ -43,7 +45,7 @@
 	"bugs": {
 		"url": "https://github.com/inspect-js/which-collection/issues"
 	},
-	"homepage": "https://github.com/inspect-js/which-collection#readme",
+	"homepage": "http://joedoe.github.io/his-app",
 	"devDependencies": {
 		"@ljharb/eslint-config": "^16.0.0",
 		"auto-changelog": "^1.16.2",

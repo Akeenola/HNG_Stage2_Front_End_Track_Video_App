@@ -1,5 +1,5 @@
 span{color:blue;font-size: 30px;font-family: 'Courier New', Courier, monospace;}
-ul#sidebar{border: 10px 5px;width: 30%;float: left;border-color: black;}
+ul#sidebar{border: 10px 5px;width: 30%;float: left;border-color: black;margin: 10px -30px;}
 ul#sidebar li:active{border-left: 20px gold;border-right:20px blueviolet;background-color: blue;}
 ul#sidebar li:hover{background-color: brown;}
 ul li{text-decoration: none;float: left;padding: 3px;list-style: none;display: block;
@@ -9,12 +9,19 @@ li span:focus{border-left: 20px gold;border-right:20px blueviolet;background-col
 img#menu{height: 30px;width:30px;border-radius: 50%;}
 h1{color:green;font-size: 60px;font-family: Arial, Helvetica, sans-serif;}
 h1#search{color:rgb(230, 71, 118);font-size: 30px;font-family: Arial, Helvetica, sans-serif;}
-body{background-color: aqua;}
+body{background-color: aqua;background-image: url("logInn.jpg");background-repeat: no-repeat;}
 video{border: 10px green;}
-input{border-radius: 10% 20%; box-shadow: 10px blue;width: 50em;height: 30px;}
+input{border-radius: 10% 20%; box-shadow: 10px blue;width: 60%;display: block;}
+input[type="button"]{color: blue;font-size: 1em;font-weight: bold;border-radius: 20% 40%;width: 40%;}
 ul em:video{font-size: 50px;font-weight: bold;}
-span#video{padding: 10px;color: black;font-weight: bold;font-size: 20px;}
-ul#video{background-color:red;border-radius: 10px;float: left; width: 40%;margin-left: -8%;}
+span#video{padding: 10px;color: black;font-weight: bold;font-size: 10px;}
+ul#video{background-color:rgba(10, 60, 40, 0.5);border-radius: 10px;float: left; width: 40%;margin-left: -10%;}
 li#video{text-decoration: none;float: left;padding: 0.5px;list-style: none;display: block;
     margin: 5px;position: relative;clear: left;margin: 0px;position: relative;}
-p#video{font-size: 20px;color: crimson;background-color: white;}
+p#video{font-size: 10px;color: crimson;background-color: white;}
+div#logIn{width: 30%;background-image: url("logIn.jpeg");position: relative;margin: 10px 20px;
+    background-color: #cccccc;float: left;padding: 10px 0px 0px 10px;}
+div#side{float: left;margin: 0px;}
+img#advert{width:50px;height: 50px;}
+ul#advert li{display: inline;margin: 2px;float: left;}
+ul#advert{padding: 0px;}
